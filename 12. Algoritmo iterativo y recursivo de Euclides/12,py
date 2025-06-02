@@ -1,0 +1,11 @@
+#Para hallar MCD
+
+def euclides_iterativo(a, b):
+    while b != 0:
+        a, b = b, a % b  # Reemplaza a y b con el resto sucesivamente
+    return a
+
+def euclides_recursivo(a, b):
+    if b == 0:
+        return a
+    return euclides_recursivo(b, a % b)  # Llamada recursiva con el resto
